@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EyeNsight</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo"><img alt="" src="../static/logo.png"></div>
+        <ul class="nav">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+<!--        <h1>Digital <span>Photography</span></h1>-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, est.</p>&lt;!&ndash;lorem10&ndash;&gt;-->
+<!--        <a href="#">Contact US</a>-->
+        <img src="{{ url_for('video') }}" alt="" width="150%"/>
+    </div>
+</header>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../static/jquery.ripples-min.js"></script>
+<script>
+    $('header').ripples({
+        dropRadius: 30,
+        perturbance: 0.03
+    });
+</script>
+</body>
+</html>
+
