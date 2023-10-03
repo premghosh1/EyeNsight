@@ -11,7 +11,7 @@ import cv2
 import numpy as np
 import mediapipe as mp
 
-from eyensight_app.model import KeyPointClassifier
+from model import KeyPointClassifier
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 camera = cv2.VideoCapture(0)
