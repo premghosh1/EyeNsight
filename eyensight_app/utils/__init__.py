@@ -1,1 +1,0 @@
-from eyensight_app.utils.cvfpscalc import CvFpsCalc
