@@ -1,6 +1,8 @@
 import copy
 import argparse
 import itertools
+import json
+import urllib3
 from collections import deque
 
 from flask import Flask, render_template, Response
@@ -9,11 +11,15 @@ import cv2
 import numpy as np
 import mediapipe as mp
 
-from model import KeyPointClassifier
+from eyensight_app.model import KeyPointClassifier
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 camera = cv2.VideoCapture(0)
 
+with open('/etc/config.json') as config_file:
+    config = json.load(config_file)
+
+app.config['SECRET_KEY'] = config.get('SECRET_KEY')
 
 def get_args():
     """
