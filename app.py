@@ -16,11 +16,6 @@ from model import KeyPointClassifier
 app = Flask(__name__, template_folder='templates', static_folder='static')
 camera = cv2.VideoCapture(0)
 
-with open('/etc/config.json') as config_file:
-    config = json.load(config_file)
-
-app.config['SECRET_KEY'] = config.get('SECRET_KEY')
-
 def get_args():
     """
     :return:
